@@ -12,6 +12,7 @@ self.addEventListener('install', event => {
             '/faq.php',
             '/open_source.php',
             '/about.php',
+            '/contact.php',
             '/ressources/css/style.css',
             '/ressources/css/sombre.css',
             '/ressources/fonts/Frutiger-Cn.otf',
