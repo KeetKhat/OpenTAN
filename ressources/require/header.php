@@ -17,5 +17,5 @@
                 <a href="/open_source.php">💻 Licences Open source</a>
                 <a href="/about.php">❓ À Propos</a>
             </nav>
-        <img src="/ressources/images/logo/logo_header.png" alt="Logo de la TAN" />
+        <img src="/ressources/images/logo/logo_header.png" alt="Logo" />
         </header>
