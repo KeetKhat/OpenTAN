@@ -63,5 +63,6 @@
 
                 }
             </script>
+        </footer>
     </body>
 </html>
