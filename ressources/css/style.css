@@ -1,0 +1,303 @@
+/* Declaration des polices */
+@font-face
+{
+    font-family: "Frutiger";
+    src: url("/ressources/fonts/Frutiger-Cn.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body
+{
+    margin: 0;
+    font-family: "Frutiger";
+}
+
+/* Gestion du menu hamburger */
+
+/* Bouton du menu hamburger */
+header button
+{
+    color: #31aa4e;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding-left: 10px;
+}
+header button span
+{
+    display: block;
+    width: 25px;
+    height: 4px;
+    margin: 5px 0 5px 0;
+    background: #31aa4e;
+    border-radius: 3px;
+    z-index: 1;
+}
+
+/* Menu hamburger */
+@keyframes menu_show
+{
+    100%
+    {
+        left: 0;
+    }
+}
+header nav
+{
+    position: fixed;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 250px;
+    background: #FFF;
+    top: 0;
+    left: -100%;
+    overflow-y: visible;
+    overflow-x: hidden;
+}
+header nav.active
+{
+    visibility: visible;
+    animation: menu_show 0.5s forwards;
+}
+header nav a
+{
+    padding: 15px;
+    border-bottom: 1px solid grey;
+    color: #31aa4e;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: "Helvetica";
+}
+header nav a:hover
+{
+    background: #f2f2f2;
+}
+
+header nav span.titre_categorie
+{
+    margin: 20px 5px 0;
+    font-size: 25px;
+    border-bottom: 1px solid grey;
+    padding: 0 0 15px 10px;
+    color: #31aa4e;
+    font-weight: bolder;
+}
+
+/* Opacite du menu */
+.opacite
+{
+    top: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    transition: all 0.5s;
+    position: fixed;
+}
+.opacite.active /* Quand l'event est appele */
+{
+    visibility: visible;
+    background: rgba(0, 0, 0, 0.75);
+    transition: all 0.5s;
+}
+
+/* Loader */
+.loader
+{
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.75);
+}
+.loader h2
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    color: #31aa4e;
+}
+
+/* En-tete de la page */
+header
+{
+    position: fixed;
+    top: 0;
+    background: #FFF;
+    width: 100%;
+    height: 35px; 
+    display: flex;
+    padding: 10px 0 10px 0;
+    box-shadow: 0 2px 4px gray;
+}
+header img
+{
+    width: 100px;
+    height: auto;
+    margin: -5px auto;
+}
+
+/* Contenu de la page */
+main
+{
+    margin: 65px 10px 0;
+}
+main h1
+{
+    color: #31aa4e;
+    font-size: 30px;
+    text-align: center;
+}
+main h2
+{
+    color: #31aa4e;
+    font-size: 20px;
+    text-align: center;
+}
+main a
+{
+    color: #31aa4e;
+    text-decoration: none;
+}
+main p b
+{
+    color: #31aa4e;
+}
+
+/* Page des horaires */
+main .container_centered form
+{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 15px 0;
+}
+main .container_centered form select
+{
+    box-shadow: 0 2px 4px gray;
+    padding: 5px;
+}
+
+/* Page des paramètres et certaines proppriétés du conteneur  princpal */
+main .settings, .container_centered
+{
+    box-shadow: 0 2px 4px gray;
+    border: none;
+    display: flex;
+    margin: 0 30% 50px;
+    padding: 0 50px 10px;
+}
+main .container_centered
+{
+    flex-direction: column;
+}
+main .container_centered #arrets
+{
+    border: 1px solid grey;
+}
+main .container_centered #bouton_envoyer
+{
+    margin: 15px auto auto;
+    background: none;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+/* Div de sélection de lignes */
+main .container_centered #lignes
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+main .container_centered #lignes a
+{
+    padding: 5px;
+}
+main .container_centered #lignes a img
+{
+    width: 50px;
+    height: auto;
+}
+
+/* Div de sélection du sens */
+main .container_centered #sens
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Div des horaires */
+main .container_centered #horaires .horaires_ligne_tableau
+{
+    display: flex;
+    padding: 5px 0;
+    border-top: 1px solid grey;
+}
+main .container_centered #horaires .heures
+{
+    margin-right: 10px;
+    font-weight: bolder;
+    color: #31aa4e;
+}
+
+/* Div des paramètres */
+main .settings
+{
+    padding: 10px 50px;
+    flex-direction: column;
+}
+main .settings .settings_categories
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+main .settings .checkbox_sombre
+{
+    border: 1px solid grey;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+main .settings .checkbox_sombre.active
+{
+    background: #31aa4e;
+}
+
+/* Notification du pied de page */
+footer .message
+{
+    opacity: 0;
+    position: fixed;
+    bottom: 10px;
+    background: #FFF;
+    margin: 0 10px;
+    padding: 0 15px;
+    box-shadow: 0 2px 4px grey;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+footer .message.active
+{
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1000px)
+{
+    main .settings, .container_centered
+    {
+        margin: 0 5% 50px;
+    }
+}

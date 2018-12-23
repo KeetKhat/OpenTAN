@@ -1,0 +1,21 @@
+/* Theme sombre */
+body, header, header nav
+{
+    background: #444 !important;
+}
+header, main .settings, .container_centered, footer .message
+{
+    box-shadow: 0 2px 4px black !important;
+}
+header nav a:hover, main .container_centered #arrets, footer .message
+{
+    background: #333 !important;
+}
+p, ul, span, main .container_centered #arrets, main .container_centered #bouton_envoyer, footer .message
+{
+    color: #FFF;
+}
+main .container_centered #horaires .heures span
+{
+    color: #31aa4e !important;
+}
