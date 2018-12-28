@@ -27,10 +27,7 @@ function loader()
 
 if (bouton)
 {
-    bouton.addEventListener("click", function(e)
-    {
-        loader()
-    })
+    bouton.addEventListener("click", loader)
 }
 
 if (liens_horaires)

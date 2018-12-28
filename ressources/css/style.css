@@ -36,31 +36,25 @@ header button span
 }
 
 /* Menu hamburger */
-@keyframes menu_show
-{
-    100%
-    {
-        left: 0;
-    }
-}
 header nav
 {
     position: fixed;
-    visibility: hidden;
     display: flex;
     flex-direction: column;
     height: 100vh;
     width: 250px;
     background: #FFF;
     top: 0;
-    left: -100%;
+    left: 0;
     overflow-y: visible;
     overflow-x: hidden;
+    transform: translateX(-250px);
+    transition: all;
+    transition-duration: .5s;
 }
 header nav.active
 {
-    visibility: visible;
-    animation: menu_show 0.5s forwards;
+    transform: translateX(0);
 }
 header nav a
 {
@@ -182,7 +176,7 @@ main .container_centered form select
     padding: 5px;
 }
 
-/* Page des paramètres et certaines proppriétés du conteneur  princpal */
+/* Page des paramètres et certaines propriétés du conteneur  princpal */
 main .settings, .container_centered
 {
     box-shadow: 0 2px 4px gray;

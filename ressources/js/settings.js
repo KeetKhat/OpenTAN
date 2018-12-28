@@ -5,7 +5,7 @@ if ("sombre" in localStorage && localStorage.getItem("sombre") === "true")
     checkbox.className += " active"
 }
 
-checkbox.addEventListener("click", function(e)
+checkbox.addEventListener("click", function()
 {
     if (localStorage.getItem("sombre") === "true")
     {

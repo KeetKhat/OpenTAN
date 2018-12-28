@@ -1,7 +1,7 @@
 var menu_opacite = document.getElementsByClassName("opacite")[0]
 var menu = document.getElementsByTagName("nav")[0]
 
-document.getElementById("hamburger").addEventListener("click", function(e)
+document.getElementById("hamburger").addEventListener("click", function()
 {
     if (menu_opacite.classList.contains("opacite"))
     {
@@ -10,7 +10,7 @@ document.getElementById("hamburger").addEventListener("click", function(e)
     }
 })
 
-menu_opacite.addEventListener("click", function(e)
+menu_opacite.addEventListener("click", function()
 {
     menu_opacite.classList.remove("active")
     menu.classList.remove("active")

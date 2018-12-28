@@ -13,7 +13,7 @@
                 {
                     navigator.serviceWorker.register('/service_worker.js').then(function(register)
                     {
-                        register.addEventListener('updatefound', function(e) 
+                        register.addEventListener('updatefound', function() 
                         {
                             NouveauSW = register.installing;
                             register.installing.addEventListener('statechange', function(e)

@@ -1,5 +1,5 @@
 const nom_cache = 'OpenTAN'
-const ver_cache = '1.0'
+const ver_cache = '1.1'
 
 self.addEventListener('install', event => {
     event.waitUntil(
@@ -29,9 +29,6 @@ self.addEventListener('install', event => {
 
 self.addEventListener('fetch', function (e)
 {
-
-    console.log(e.request.url)
-
     e.respondWith(
         caches.match(e.request)
         .then(function (response)
@@ -45,7 +42,7 @@ self.addEventListener('fetch', function (e)
     )
 })
 
-self.addEventListener('activate', function(e)
+self.addEventListener('activate', function()
 {
     var cache_actif = nom_cache + '_' + ver_cache
     caches.keys().then(function(cacheNames)
