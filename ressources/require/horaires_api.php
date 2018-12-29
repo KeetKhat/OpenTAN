@@ -87,8 +87,8 @@ $nom_lieu[953] = 'Thébaudières (Le Cellier)';
 $nom_lieu[954] = 'Thébaudières (Saint-Herblain)';
 
 //Ecoles
-$nom_lieu[1013] = 'Ecoles (Les Sorinières)';
-$nom_lieu[1014] = 'Ecoles (Le Pellerin)';
+//$nom_lieu[1013] = 'Ecoles (Les Sorinières)';
+//$nom_lieu[1014] = 'Ecoles (Le Pellerin)';
 
 /* Fin de la correction des arrêts en double */
 
