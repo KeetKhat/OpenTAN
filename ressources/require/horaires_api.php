@@ -15,81 +15,80 @@ $nom_lieu = array_column($json_lieu, 'libelle');
 /* Début de la correction des arrêts en double */
 
 //8 Mai
-$nom_lieu[1] = '8 Mai (Rezé)';
-$nom_lieu[2] = '8 Mai (Vertou)';
+$nom_lieu[array_search('MAI8', $code_lieu)] = '8 Mai (Rezé)';
+$nom_lieu[array_search('HMVE', $code_lieu)] = '8 Mai (Vertou)';
 
 //Ampère
-$nom_lieu[11] = 'Ampère (Carquefou)';
-$nom_lieu[12] = 'Ampère (La Chapelle-sur-Erdre)';
+$nom_lieu[array_search('APER', $code_lieu)] = 'Ampère (Carquefou)';
+$nom_lieu[array_search('AMPE', $code_lieu)] = 'Ampère (La Chapelle-sur-Erdre)';
 
 //Beau Soleil
-$nom_lieu[59] = 'Beau Soleil (Sainte-Luce-sur-Loire)';
-$nom_lieu[60] = 'Beau Soleil (Bouguenais)';
+$nom_lieu[array_search('BSSL', $code_lieu)] = 'Beau Soleil (Sainte-Luce-sur-Loire)';
+$nom_lieu[array_search('BSOL', $code_lieu)] = 'Beau Soleil (Bouguenais)';
 
 //Cambronne
-$nom_lieu[154] = 'Cambronne (Nantes)';
-$nom_lieu[155] = 'Cambronne (Saint-Sébastien-sur-Loire)';
+$nom_lieu[array_search('CBSS', $code_lieu)] = 'Cambronne (Saint-Sébastien-sur-Loire)';
+$nom_lieu[array_search('CBNA', $code_lieu)] = 'Cambronne (Nantes)';
 
 //Europe
-$nom_lieu[324] = 'Europe (Thouaré-sur-Loire)';
-$nom_lieu[325] = 'Europe (Vertou)';
+$nom_lieu[array_search('EUCA', $code_lieu)] = 'Europe (Thouaré-sur-Loire)';
+$nom_lieu[array_search('EUVE', $code_lieu)] = 'Europe (Vertou)';
 
 //Garotterie
-$nom_lieu[377] = 'Garotterie (Saint-Herblain)';
-$nom_lieu[378] = 'Garotterie (Saint-Aignan de Grand Lieu)';
+$nom_lieu[array_search('GARO', $code_lieu)] = 'Garotterie (Saint-Aignan de Grand Lieu)';
+$nom_lieu[array_search('GRTE', $code_lieu)] = 'Garotterie (Saint-Herblain)';
 
 //Haute Forêt
-$nom_lieu[430] = 'Haute Forêt (Nantes)';
-$nom_lieu[431] = 'Haute Forêt (Vertou)';
+$nom_lieu[array_search('HFVE', $code_lieu)] = 'Haute Forêt (Vertou)';
+$nom_lieu[array_search('HFNA', $code_lieu)] = 'Haute Forêt (Nantes)';
 
 //Jean Jaurès
-$nom_lieu[470] = 'Jean Jaurès (La Chapelle-sur-Erdre)';
-$nom_lieu[471] = 'Jean Jaurès (Nantes)';
+$nom_lieu[array_search('JJNA', $code_lieu)] = 'Jean Jaurès (Nantes)';
+$nom_lieu[array_search('JJCE', $code_lieu)] = 'Jean Jaurès (La Chapelle-sur-Erdre)';
 
 //Jean Monnet
-$nom_lieu[473] = 'Jean Monnet (Rezé)'; 
-$nom_lieu[474] = 'Jean Monnet (Vertou)';
+$nom_lieu[array_search('JMNT', $code_lieu)] = 'Jean Monnet (Rezé)'; 
+$nom_lieu[array_search('JMON', $code_lieu)] = 'Jean Monnet (Vertou)';
 
 //Joliverie
-$nom_lieu[480] = 'Joliverie (Nantes)';
-$nom_lieu[481] = 'Joliverie (Saint-Sébastien-sur-Loire)';
+$nom_lieu[array_search('JLVE', $code_lieu)] = 'Joliverie (Nantes)';
+$nom_lieu[array_search('JLIE', $code_lieu)] = 'Joliverie (Saint-Sébastien-sur-Loire)';
 
 //Lechat
-$nom_lieu[548] = 'Lechat (Rezé)';
-$nom_lieu[549] = 'Lechat (Nantes)';
+$nom_lieu[array_search('LECH', $code_lieu)] = 'Lechat (Nantes)';
+$nom_lieu[array_search('LCHA', $code_lieu)] = 'Lechat (Rezé)';
 
 //Mermoz
-$nom_lieu[635] = 'Mermoz (Saint-Sébastien-sur-Loire)';
-$nom_lieu[636] = 'Mermoz (Nantes)';
+$nom_lieu[array_search('MMSS', $code_lieu)] = 'Mermoz (Saint-Sébastien-sur-Loire)';
+$nom_lieu[array_search('MMNA', $code_lieu)] = 'Mermoz (Nantes)';
 
 //Plessis
-$nom_lieu[768] = 'Plessis (La Chapelle-sur-Erdre)';
-$nom_lieu[769] = 'Plessis (Sautron)';
+$nom_lieu[array_search('PLSS', $code_lieu)] = 'Plessis (La Chapelle-sur-Erdre)';
+$nom_lieu[array_search('PLES', $code_lieu)] = 'Plessis (Sautron)';
 
 //Point du Jour
-$nom_lieu[775] = 'Point du Jour (Nantes)';
-$nom_lieu[776] = 'Point du Jour (Thouaré-sur-Loire)';
+$nom_lieu[array_search('PJOU', $code_lieu)] = 'Point du Jour (Nantes)';
+$nom_lieu[array_search('PDJO', $code_lieu)] = 'Point du Jour (Thouaré-sur-Loire)';
 
 //Portereau
-$nom_lieu[801] = 'Portereau (Saint-Sébastien-sur-Loire)';
-$nom_lieu[802] = 'Portereau (Vertou)';
+$nom_lieu[array_search('PTRE', $code_lieu)] = 'Portereau (Saint-Sébastien-sur-Loire)';
+$nom_lieu[array_search('PRTE', $code_lieu)] = 'Portereau (Vertou)';
 
 //Rocher
-$nom_lieu[862] = 'Rocher (Saint-Herblain)';
-$nom_lieu[863] = 'Rocher (Vertou)';
+$nom_lieu[array_search('RCHE', $code_lieu)] = 'Rocher (Vertou)';
+$nom_lieu[array_search('RCER', $code_lieu)] = 'Rocher (Saint-Herblain)';
 
 //Terte
-$nom_lieu[950] = 'Tertre (Nantes)';
-$nom_lieu[951] = 'Tertre (Saint-Jean-de-Boiseau)';
+$nom_lieu[array_search('TEBS', $code_lieu)] = 'Tertre (Saint-Jean-de-Boiseau)';
+$nom_lieu[array_search('TENA', $code_lieu)] = 'Tertre (Nantes)';
 
 //Thébaudières
-$nom_lieu[953] = 'Thébaudières (Le Cellier)';
-$nom_lieu[954] = 'Thébaudières (Saint-Herblain)';
+$nom_lieu[array_search('THEB', $code_lieu)] = 'Thébaudières (Saint-Herblain)';
+$nom_lieu[array_search('TBAU', $code_lieu)] = 'Thébaudières (Le Cellier)';
 
 //Ecoles
-$nom_lieu[974] = 'Écoles (Le Pellerin)';
-$nom_lieu[975] = 'Écoles (Les Sorinières)';
-
+$nom_lieu[array_search('EPEL', $code_lieu)] = 'Écoles (Le Pellerin)';
+$nom_lieu[array_search('ESOR', $code_lieu)] = 'Écoles (Les Sorinières)';
 
 /* Fin de la correction des arrêts en double */
 
