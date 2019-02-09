@@ -1,6 +1,6 @@
 # OpenTAN
 
-![Logo d'OpenTAN](https://opentan.cf/ressources/images/logo/logo_header.png)
+![Logo d'OpenTAN](https://opentan.fr/ressources/images/logo/logo_header.png)
 
 OpenTAN est une Progressive Web App qui vous permet de trouver les différents horaires des lignes du réseau de transports Nantais (TAN)
 
