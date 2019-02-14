@@ -1,5 +1,6 @@
         <footer>
             <script src="/ressources/js/hamburger.js"></script>
+            <noscript><div class="message active"><p>Veuillez activer JavaScript afin d'utiliser OpenTAN</p></div></noscript>
             <div class="message"></div>
             <script>
                 let NouveauSW;

@@ -23,6 +23,14 @@ fetch('/ressources/require/horaires_api.php').then(response =>
     champ_arrets.placeholder = "Entrez votre arrêt actuel"
 
 }).catch(err => {
-    console.log('Erreur de connexion à l\'API')
-    champ_arrets.placeholder = "Échec du chargement"
+    if (navigator.onLine)
+    {
+        champ_arrets.placeholder = "Échec du chargement"
+        console.log('Erreur de connexion à l\'API - Erreur API')
+    }
+    else
+    {
+        champ_arrets.placeholder = "Vous êtes hors-connexion"
+        console.log('Erreur de connexion à l\'API - Hors-connexion')
+    }
 })

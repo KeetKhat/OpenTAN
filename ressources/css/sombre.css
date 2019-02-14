@@ -3,7 +3,7 @@ body, header, header nav
 {
     background: #444 !important;
 }
-header, main .settings, .container_centered, footer .message
+header, main .settings, .container_centered, footer .message, main .container_centered form select
 {
     box-shadow: 0 2px 4px black !important;
 }
@@ -18,4 +18,8 @@ p, ul, span, main .container_centered #arrets, main .container_centered #bouton_
 main .container_centered #horaires .heures span
 {
     color: #31aa4e !important;
+}
+main .container_centered form select
+{
+    border: 1px solid #333 !important;
 }

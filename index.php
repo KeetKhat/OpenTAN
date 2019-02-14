@@ -5,6 +5,11 @@
         <?php require_once("ressources/require/header.php"); ?>
         <main>
             <h1>Actualités</h1>
+			<p><b>13 Février 2019</b> : Publication de la version 1.2</p>
+			<ul>
+				<li>Support complet d'iOS</li>
+				<li>Réorganisation de la page des horaires</li>
+			</ul>
             <p><b>28 Décembre 2018</b> : Publication de la version 1.1</p>
             <ul>
                 <li>Ajout des images aux lignes n'en possédant pas</li>

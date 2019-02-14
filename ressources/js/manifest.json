@@ -1,5 +1,6 @@
 {
     "name": "OpenTAN",
+    "description": "OpenTAN vous permet de trouver facilement et simplement les horaires en temps réel des différentes lignes du réseau Nantais",
     "short_name": "OpenTAN",
     "lang": "fr-FR",
     "scope": "/",
@@ -8,6 +9,16 @@
     "background_color": "#FFF",
     "theme_color": "#31aa4e",
     "icons": [
+		{
+         "src":"/ressources/images/logo/logo_image.png",
+         "sizes": "96x96",
+         "type": "image/png"
+       },
+	   {
+         "src":"/ressources/images/logo/logo_image.png",
+         "sizes": "144x144",
+         "type": "image/png"
+       },
         {
          "src":"/ressources/images/logo/logo_image.png",
          "sizes": "192x192",

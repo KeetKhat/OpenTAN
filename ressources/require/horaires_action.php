@@ -96,18 +96,21 @@ $url = "http://{$_SERVER['HTTP_HOST']}/ressources/require/horaires_api.php";
 				break;
 			}
 
-			echo "<h2>{$liste_arrets['nomArrets'][$cle_arrets]} - Ligne {$_GET['ligne']} vers {$nom_sens_ligne}</h2>";
-			$nombre_heures = count($ligne_horaires['horaires']);
-
-			echo "<div id=\"horaires\">";
-
+			/* Gestion des couleurs du jour */
 			$couleur = array(
 				"1" => "Bleu",
 				"2" => "Vert",
 				"3" => "Jaune",
 				"4" => "Violet",
-				"5" => "Blanc"
+				"5" => "Blanc",
+				"6" => "Orange"
 			);
+
+			echo "<h2>{$liste_arrets['nomArrets'][$cle_arrets]} - Ligne {$_GET['ligne']} vers {$nom_sens_ligne}</h2>";
+			echo "<div id=\"barre\"><p><b id=\"couleur_jour\">Jour {$couleur[$ligne_horaires['couleur']]}</b></p></div>";
+			$nombre_heures = count($ligne_horaires['horaires']);
+
+			echo "<div id=\"horaires\">";
 
 			$horaires_span = NULL;
 			$minutes_span = NULL;
@@ -128,8 +131,6 @@ $url = "http://{$_SERVER['HTTP_HOST']}/ressources/require/horaires_api.php";
 				
 			}
 
-			echo "<p><b>Jour {$couleur[$ligne_horaires['couleur']]}</b></p>";
-
 			if (@$ligne_horaires['notes'] != null)
 			{
 				$nombre_notes = count($ligne_horaires['notes']);
@@ -147,7 +148,6 @@ $url = "http://{$_SERVER['HTTP_HOST']}/ressources/require/horaires_api.php";
 				}
 			}
 			echo "</div>";
-			
 		}
 		else
 		{

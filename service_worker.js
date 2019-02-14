@@ -1,5 +1,5 @@
 const nom_cache = 'OpenTAN'
-const ver_cache = '1.1'
+const ver_cache = '1.2'
 
 self.addEventListener('install', event => {
     event.waitUntil(
@@ -17,6 +17,7 @@ self.addEventListener('install', event => {
             '/ressources/css/sombre.css',
             '/ressources/fonts/Frutiger-Cn.otf',
             '/ressources/js/autocompletion.js',
+            '/ressources/js/autocompletion_ios.js',
             '/ressources/js/hamburger.js',
             '/ressources/js/manifest.json',
             '/ressources/js/settings.js',
@@ -27,7 +28,7 @@ self.addEventListener('install', event => {
     console.log('Fichiers mis en cache')
 })
 
-self.addEventListener('fetch', function (e)
+self.addEventListener('fetch', function(e)
 {
     e.respondWith(
         caches.match(e.request)
@@ -64,7 +65,7 @@ self.addEventListener('activate', function()
     })
 })
 
-self.addEventListener('message', function (e)
+self.addEventListener('message', function(e)
 {
     if (e.data.action === 'wait_update')
     {
