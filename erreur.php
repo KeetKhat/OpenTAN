@@ -17,17 +17,17 @@ else //Si oui = on la déclare en GET
 switch($erreur)
 {
     case '403':
-        header('HTTP/1.1 403 Forbidden');
+        header('HTTP/2 403 Forbidden');
         $titre = "Erreur 403";
     break;
 
     case '404':
-        header('HTTP/1.1 404 Not Found');
+        header('HTTP/2 404 Not Found');
         $titre = "Erreur 404";
     break;
     
     default:
-        header('HTTP/1.1 404 Not Found');
+        header('HTTP/2 404 Not Found');
 }
     require_once("ressources/require/head.php"); ?>
     <body>

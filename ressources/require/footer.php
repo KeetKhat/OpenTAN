@@ -44,7 +44,7 @@
                         console.log('Enregistrement du Service Worker effectué dans le chemin ' + register.scope)
                     }).catch(function(error)
                     {
-                        console.log('Échec de l\'enregistrement du Service Worker.' + error)
+                        console.log('Échec de l\'enregistrement du Service Worker. Erreur : ' + error)
                     })
 
                     let rafraichissement

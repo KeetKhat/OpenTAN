@@ -1,3 +1,5 @@
+// Bravo à Apple qui ne supporte pas la balise datalist et qui force l'utilisation de WebKit sur iOS :)
+
 window.onload = function()
 {
     var liste_arrets = document.getElementsByTagName("select")[0]

@@ -9,7 +9,9 @@
                 <a href="/index.php">🏠 Accueil</a>
                 <span class="titre_categorie">Déplacements</span>
                 <a href="/horaires.php">🕒 Horaires</a>
-                <span class="titre_categorie">Autre</span>
+                <a href="/favoris.php">⭐ Favoris</a>
+                <!--<a href="info_trafic.php">❗ Info trafic <span class="info_trafic_etat">●</span></a>-->
+                <span class="titre_categorie">Autres</span>
                 <a href="/settings.php">🔧 Réglages</a>
                 <a href="contact.php">📧 Contact</a>
                 <a href="/faq.php">📖 FAQ</a>

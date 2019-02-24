@@ -90,6 +90,9 @@ $nom_lieu[array_search('TBAU', $code_lieu)] = 'Thébaudières (Le Cellier)';
 $nom_lieu[array_search('EPEL', $code_lieu)] = 'Écoles (Le Pellerin)';
 $nom_lieu[array_search('ESOR', $code_lieu)] = 'Écoles (Les Sorinières)';
 
+//Correction du bug de l'API
+$nom_lieu[array_search('OTAG', $code_lieu)] = '50 Otages';
+
 /* Fin de la correction des arrêts en double */
 
 if (isset($_GET['arrets']) && !empty($_GET['arrets']))
@@ -109,17 +112,30 @@ if (isset($_GET['arrets']) && !empty($_GET['arrets']))
             else
             {
                 echo json_encode(array('code' => '404', 'message' => 'La ligne est incorrecte'));
-                header('HTTP/1.1 404 Not Found');
+                header('HTTP/2 404 Not Found');
                 $erreur = true;
             }
 
             if (isset($_GET['sens']) && !empty($_GET['sens']))
             {
+                //Correction de l'API qui renvoie des légendes manquantes
+                $correction_notes_url = file_get_contents("https://www.tan.fr/ewp/mhv.php/horairesarrets.html?codeArret={$_GET['arrets']}&numLigne={$_GET['ligne']}&sens={$_GET['sens']}");
+                preg_match_all("/<div class=\"direction-txt\">([A-Za-z])\s\:\s([A-Za-z éàèôûù\/.]+)<\/div>/", $correction_notes_url, $correction_notes, PREG_SET_ORDER, 0);
+                //FIN
+
                 switch ($_GET['sens'])
                 {
                     case 1:
                         $json_horaires = file_get_contents("$url_api/horairesarret.json/{$_GET['arrets']}/{$_GET['ligne']}/1");
                         $json_horaires = json_decode($json_horaires, true);
+
+                        //Correction de l'API qui renvoie des légendes manquantes
+                        for($i = 0; count($correction_notes) > $i; $i++)
+                        {
+                            $json_horaires['notes'][$i]['libelle'] = $correction_notes[$i][2];
+                        }
+                        //FIN
+
                         if (@$json_horaires['horaires'] != null)
                         {
                             if (@$json_horaires['notes'] == null)
@@ -134,13 +150,21 @@ if (isset($_GET['arrets']) && !empty($_GET['arrets']))
                         else
                         {
                             echo json_encode(array('code' => '404', 'message' => 'Aucun horaire n\'est disponible'));
-                            header('HTTP/1.1 404 Not Found');
+                            header('HTTP/2 404 Not Found');
                         }
                     break;
 
                     case 2:
                         $json_horaires = file_get_contents("$url_api/horairesarret.json/{$_GET['arrets']}/{$_GET['ligne']}/2");
                         $json_horaires = json_decode($json_horaires, true);
+
+                        //Correction de l'API qui renvoie des légendes manquantes
+                        for($i = 0; count($correction_notes) > $i; $i++)
+                        {
+                            $json_horaires['notes'][$i]['libelle'] = $correction_notes[$i][2];
+                        }
+                        //FIN
+
                         if (@$json_horaires['horaires'] != null)
                         {
                             if (@$json_horaires['notes'] == null)
@@ -155,13 +179,13 @@ if (isset($_GET['arrets']) && !empty($_GET['arrets']))
                         else
                         {
                             echo json_encode(array('code' => '404', 'message' => 'Aucun horaire n\'est disponible'));
-                            header('HTTP/1.1 404 Not Found');
+                            header('HTTP/2 404 Not Found');
                         }
                     break;
 
                     default:
                         echo json_encode(array('code' => '404', 'message' => 'Le sens est incorrect'));
-                        header('HTTP/1.1 404 Not Found');
+                        header('HTTP/2 404 Not Found');
                 }
             }
             else
@@ -185,7 +209,7 @@ if (isset($_GET['arrets']) && !empty($_GET['arrets']))
     else
     {
         echo json_encode(array('code' => '404', 'message' => 'L\'arrêt est incorrect'));
-        header('HTTP/1.1 404 Not Found');
+        header('HTTP/2 404 Not Found');
     }
 }
 else

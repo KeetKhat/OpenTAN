@@ -10,6 +10,6 @@
                 <li><a href="https://data.nantesmetropole.fr/explore/dataset/244400404_charte-graphique-tan/">Charte graphique TAN</a></li>
                 <li><a href="https://data.nantesmetropole.fr/explore/dataset/244400404_api-temps-reel-tan/">API Temps Réel TAN</a></li>
             </ul>
-            <p>Le code source d'OpenTAN est disponible sur <a href="https://github.com/KeetKhat/OpenTAN">GitHub</a></p>
+            <p>Le code source d'OpenTAN est disponible sur <a href="https://github.com/KeetKhat/OpenTAN" title="Dépôt GitHub" target="_blank">GitHub</a></p>
         </main>
         <?php require_once("ressources/require/footer.php"); ?>

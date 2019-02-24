@@ -74,7 +74,7 @@ $url = "http://{$_SERVER['HTTP_HOST']}/ressources/require/horaires_api.php";
 		if ($_GET['sens'] == 1 || $_GET['sens'] == 2) //On vérifie si le sens entrée est correct
 		{
 			$liste_arrets = json_decode(file_get_contents($GLOBALS['url']), true);
-			$liste_sens = json_decode(file_get_contents("{$GLOBALS['url']}?arrets={$_GET['arrets']}&ligne={$_GET['ligne']}"));
+			$liste_sens = json_decode(@file_get_contents("{$GLOBALS['url']}?arrets={$_GET['arrets']}&ligne={$_GET['ligne']}"));
 			$ligne_horaires = json_decode(@file_get_contents("{$GLOBALS['url']}?arrets={$_GET['arrets']}&ligne={$_GET['ligne']}&sens={$_GET['sens']}"), true);
 
 			if ($ligne_horaires == null)
@@ -98,16 +98,16 @@ $url = "http://{$_SERVER['HTTP_HOST']}/ressources/require/horaires_api.php";
 
 			/* Gestion des couleurs du jour */
 			$couleur = array(
-				"1" => "Bleu",
-				"2" => "Vert",
-				"3" => "Jaune",
-				"4" => "Violet",
-				"5" => "Blanc",
-				"6" => "Orange"
+				"1" => "Jour Bleu",
+				"2" => "Jour Vert",
+				"3" => "Jour Jaune",
+				"4" => "Jour Violet",
+				"5" => "Jour Blanc",
+				"6" => "Mouvement social"
 			);
 
 			echo "<h2>{$liste_arrets['nomArrets'][$cle_arrets]} - Ligne {$_GET['ligne']} vers {$nom_sens_ligne}</h2>";
-			echo "<div id=\"barre\"><p><b id=\"couleur_jour\">Jour {$couleur[$ligne_horaires['couleur']]}</b></p></div>";
+			echo "<div id=\"barre\"><p><b id=\"couleur_jour\">{$couleur[$ligne_horaires['couleur']]}</b></p><p><b id=\"ajout_favoris\">Ajouter aux favoris</b></p></div>";
 			$nombre_heures = count($ligne_horaires['horaires']);
 
 			echo "<div id=\"horaires\">";
@@ -148,6 +148,7 @@ $url = "http://{$_SERVER['HTTP_HOST']}/ressources/require/horaires_api.php";
 				}
 			}
 			echo "</div>";
+			echo "<script src=\"/ressources/js/favoris.js\"></script>";
 		}
 		else
 		{

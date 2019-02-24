@@ -59,25 +59,50 @@ header nav.active
 header nav a
 {
     padding: 15px;
-    border-bottom: 1px solid grey;
     color: #31aa4e;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
+    padding-left: 20px;
     font-family: "Helvetica";
 }
 header nav a:hover
 {
     background: #f2f2f2;
 }
-
 header nav span.titre_categorie
 {
-    margin: 20px 5px 0;
-    font-size: 25px;
-    border-bottom: 1px solid grey;
-    padding: 0 0 15px 10px;
+    font-size: 20px;
+    padding: 15px;
+    background: #f2f2f2;
     color: #31aa4e;
     font-weight: bolder;
+}
+header nav a .info_trafic_etat
+{
+    color: grey;
+}
+header nav a .info_trafic_etat.connexion
+{
+    animation: connexion 1s infinite alternate;
+}
+header nav a .info_trafic_etat.normal
+{
+    color: greenyellow;
+}
+header nav a .info_trafic_etat.perturbations
+{
+    color: red;
+}
+@keyframes connexion
+{
+    from 
+    {
+        color: grey;
+    }
+    to
+    {
+        color: orange;
+    }
 }
 
 /* Opacite du menu */
@@ -233,6 +258,10 @@ main .container_centered #barre
 {
     display: flex;
     justify-content: space-between;
+}
+main .container_centered #barre #ajout_favoris, main .container_centered #barre #retour_arriere
+{
+    cursor: pointer;
 }
 main .container_centered #horaires .horaires_ligne_tableau
 {

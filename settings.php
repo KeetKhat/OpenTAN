@@ -11,7 +11,7 @@
                                 <div class="checkbox_sombre"></div>
                         </div>
                         <div class="settings_categories">
-                                <span>Version 1.2</span>
+                                <span>Version 1.3</span>
                         </div>
                 </div>
         </main>

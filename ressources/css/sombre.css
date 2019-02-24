@@ -7,7 +7,7 @@ header, main .settings, .container_centered, footer .message, main .container_ce
 {
     box-shadow: 0 2px 4px black !important;
 }
-header nav a:hover, main .container_centered #arrets, footer .message
+header nav a:hover, main .container_centered #arrets, footer .message, header nav span.titre_categorie
 {
     background: #333 !important;
 }

@@ -1,5 +1,5 @@
 const nom_cache = 'OpenTAN'
-const ver_cache = '1.2'
+const ver_cache = '1.3'
 
 self.addEventListener('install', event => {
     event.waitUntil(
@@ -8,6 +8,7 @@ self.addEventListener('install', event => {
             '/',
             '/index.php',
             '/horaires.php',
+            '/favoris.php',
             '/settings.php',
             '/faq.php',
             '/open_source.php',
@@ -19,6 +20,7 @@ self.addEventListener('install', event => {
             '/ressources/js/autocompletion.js',
             '/ressources/js/autocompletion_ios.js',
             '/ressources/js/hamburger.js',
+            '/ressources/js/favoris.js',
             '/ressources/js/manifest.json',
             '/ressources/js/settings.js',
             '/ressources/images/logo/logo_header.png',
@@ -69,6 +71,6 @@ self.addEventListener('message', function(e)
 {
     if (e.data.action === 'wait_update')
     {
-      self.skipWaiting()
+        self.skipWaiting()
     }
 })
