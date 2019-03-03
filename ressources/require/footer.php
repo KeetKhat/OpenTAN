@@ -17,6 +17,8 @@
                         register.addEventListener('updatefound', function() 
                         {
                             NouveauSW = register.installing;
+                            document.getElementsByClassName("message")[0].innerHTML = '<p>Téléchargement de la mise à jour</p>'
+                            document.getElementsByClassName("message")[0].className += ' active'
                             register.installing.addEventListener('statechange', function(e)
                             {
                                 if (NouveauSW.state === 'installed')
@@ -24,7 +26,6 @@
                                         if (navigator.serviceWorker.controller)
                                         {
                                             document.getElementsByClassName("message")[0].innerHTML = '<p>Une nouvelle version est disponible, appuyez sur ce message pour l\'installer</p>'
-                                            document.getElementsByClassName("message")[0].className += ' active'
                                         }
                                         else
                                         {
