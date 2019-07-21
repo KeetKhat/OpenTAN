@@ -181,9 +181,7 @@ if (isset($_GET['arrets']) && !empty($_GET['arrets'])) //On regarde les lignes d
         }
         elseif (count($_GET) >= 3)
         {
-            echo json_encode(array('code' => '400', 'message' => 'Mauvaise requête GET'));
-            header('HTTP/2 400 Bad Request');
-            exit();
+            header("Location: horaires.php?arrets={$_GET['arrets']}&ligne={$_GET['ligne']}");
         }
     }
     else //Si $_GET['ligne'] n'est pas déclaré on affiche les lignes de l'arrêt
