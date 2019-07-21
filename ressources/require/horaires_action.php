@@ -1,5 +1,5 @@
 <?php
-$url = "http://{$_SERVER['HTTP_HOST']}/ressources/require/horaires_api.php";
+$url = "https://api.{$_SERVER['HTTP_HOST']}/horaires.php";
 
 	function ParseArrets()
 	{

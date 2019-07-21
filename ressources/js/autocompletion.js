@@ -5,7 +5,7 @@ var bouton_envoyer = document.getElementById("bouton_envoyer")
 champ_arrets.placeholder = "Chargement de la liste..."
 bouton_envoyer.disabled = true;
 
-fetch('/ressources/require/horaires_api.php').then(response =>
+fetch('https://api.' + window.location.hostname + '/horaires.php').then(response =>
 {
     return response.json()
 }).then(data => {

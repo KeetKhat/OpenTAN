@@ -1,5 +1,5 @@
 const nom_cache = 'OpenTAN'
-const ver_cache = '1.3.1'
+const ver_cache = '1.3.2'
 
 self.addEventListener('install', event => {
     event.waitUntil(

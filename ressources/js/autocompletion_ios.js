@@ -9,7 +9,7 @@ window.onload = function()
     document.getElementsByClassName("message")[0].className += ' active'
     bouton_envoyer.disabled = true;
 
-    fetch('/ressources/require/horaires_api.php').then(response =>
+    fetch('https://api.' + window.location.hostname + '/horaires.php').then(response =>
         {
             return response.json()
         }).then(data => {
