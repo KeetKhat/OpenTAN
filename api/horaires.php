@@ -103,7 +103,7 @@ if (isset($_GET['arrets']) && !empty($_GET['arrets'])) //On regarde les lignes d
 {
     $demande_lieu = array_search($_GET['arrets'], array_column($retour, 'codeLieu'));
 
-    if (isset($_GET['ligne']) && !empty($_GET['ligne'])) //On regarde les horaires pour la ligne choisi
+    if (isset($_GET['ligne']) && !empty($_GET['ligne'])) //On regarde les horaires pour la ligne choisie
     {
         $curl = curl_init("$url_api/horairesarret.json/{$_GET['arrets']}/{$_GET['ligne']}/1");
         curl_setopt($curl,CURLOPT_USERAGENT, $user_agent);
