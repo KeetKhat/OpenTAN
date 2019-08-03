@@ -12,38 +12,14 @@
                         {
                     ?>
                         <form action="horaires.php" method="get">
-                        <h2>Entrez votre arrêt actuel</h2>
-                            <?php if ((strstr($_SERVER['HTTP_USER_AGENT'],'iPhone') || strstr($_SERVER['HTTP_USER_AGENT'],'iPod') || strstr($_SERVER['HTTP_USER_AGENT'],'iPad')))
-                            {
-                            ?>
-                                <select name="arrets" id="arrets">
-                                </select>
-                            <?php
-                            } 
-                            else
-                            {
-                            ?>
+                        <h2>Votre arrêt actuel</h2>
                                 <input list="liste_arrets" id="arrets" name="arrets" type="text" />
                                     <datalist id="liste_arrets">
                                     </datalist>
-                            <?php
-                            }
-                            ?>
                         <input type="submit" id="bouton_envoyer" value="Suivant" />
                         </form>
-                    <?php
-                            if ((strstr($_SERVER['HTTP_USER_AGENT'],'iPhone') || strstr($_SERVER['HTTP_USER_AGENT'],'iPod') ||strstr($_SERVER['HTTP_USER_AGENT'],'iPad')))
-                            {
-                            ?>
-                                <script src="/ressources/js/autocompletion_ios.js"></script>
-                            <?php
-                            }
-                            else
-                            {
-                            ?>
                                 <script src="/ressources/js/autocompletion.js"></script>
                             <?php
-                            }
                         }
                         else
                         {

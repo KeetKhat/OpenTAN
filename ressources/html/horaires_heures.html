@@ -1,0 +1,30 @@
+<!-- INCLUDE head.html -->
+<!-- INCLUDE header.html -->
+        <main>
+            <h1>Horaires</h1>
+            <div class="container_centered">
+
+                <!-- IF EMPTY-->
+                <h2>Aucun horaire n'est disponible pour cet arrêt</h2>
+                <!-- ENDIF EMPTY -->
+
+                <!-- IF !EMPTY -->
+                <h2>{NOM_ARRET && NOM_LIGNE && NOM_SENS_LIGNE}</h2>
+                <div id="barre"><p><b id="couleur_jour">{COULEUR_LIGNE}</b></p><p><b id="ajout_favoris">Ajouter aux favoris</b></p></div>
+                <div id="horaires">
+                    <div class="horaires_ligne_tableau">
+                        <div class="heures">{HEURE_LIGNE}</div>
+                        <div class="minutes">{MINUTE_LIGNE}</div>
+                    </div>
+                </div>
+                
+                <!-- IF NOTES-->
+                    <p><b>{NOTES_NUMERO}</b> : {NOTES_TEXTE}</p>
+                <!-- ENDIF NOTES -->
+
+                <!-- ENDIF !EMPTY -->
+            </div>
+            <script src="/ressources/js/favoris.js"></script>
+            <script src="/ressources/js/loader.js"></script>
+        </main>
+<!-- INCLUDE footer.html -->

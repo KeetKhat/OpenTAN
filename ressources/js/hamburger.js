@@ -15,3 +15,8 @@ menu_opacite.addEventListener("click", function()
     menu_opacite.classList.remove("active")
     menu.classList.remove("active")
 })
+
+if (navigator.onLine)
+{
+    document.getElementsByClassName("info_trafic_etat")[0].className += " connexion"
+}

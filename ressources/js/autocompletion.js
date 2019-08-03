@@ -30,7 +30,7 @@ fetch('https://api.' + window.location.hostname + '/horaires.php').then(response
     }
     else
     {
-        champ_arrets.placeholder = "Vous êtes hors-connexion"
+        champ_arrets.placeholder = "Hors-connexion"
         console.log('Erreur de connexion à l\'API - Hors-connexion')
     }
 })

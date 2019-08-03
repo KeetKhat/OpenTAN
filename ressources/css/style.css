@@ -1,4 +1,4 @@
-/* Declaration des polices */
+/* Déclaration des polices */
 @font-face
 {
     font-family: "Frutiger";
@@ -50,7 +50,7 @@ header nav
     overflow-x: hidden;
     transform: translateX(-250px);
     transition: all;
-    transition-duration: .5s;
+    transition-duration: .2s;
 }
 header nav.active
 {
@@ -105,17 +105,17 @@ header nav a .info_trafic_etat.perturbations
     }
 }
 
-/* Opacite du menu */
+/* Opacité du menu */
 .opacite
 {
     top: 0;
     width: 100%;
     height: 100%;
     visibility: hidden;
-    transition: all 0.5s;
+    transition: all 0.2s;
     position: fixed;
 }
-.opacite.active /* Quand l'event est appele */
+.opacite.active /* Quand l'event est appelé */
 {
     visibility: visible;
     background: rgba(0, 0, 0, 0.75);
@@ -141,7 +141,7 @@ header nav a .info_trafic_etat.perturbations
     color: #31aa4e;
 }
 
-/* En-tete de la page */
+/* En-tête de la page */
 header
 {
     position: fixed;
@@ -151,7 +151,8 @@ header
     height: 35px; 
     display: flex;
     padding: 10px 0 10px 0;
-    box-shadow: 0 2px 4px gray;
+    box-shadow: 0 0 2px gray;
+    z-index: 5;
 }
 header img
 {
@@ -196,14 +197,14 @@ main .container_centered form
 }
 main .container_centered form select
 {
-    box-shadow: 0 2px 4px gray;
+    box-shadow: 0 0 2px gray;
     padding: 5px;
 }
 
 /* Page des paramètres et certaines propriétés du conteneur  princpal */
 main .settings, .container_centered
 {
-    box-shadow: 0 2px 4px gray;
+    box-shadow: 0 0 2px gray;
     border: none;
     display: flex;
     margin: 0 30% 50px;
@@ -215,13 +216,16 @@ main .container_centered
 }
 main .container_centered #arrets
 {
-    border: 1px solid grey;
+    border: none;
+    padding: 5px;
+    box-shadow: 0 0 2px grey;
 }
 main .container_centered #bouton_envoyer
 {
     margin: 15px auto auto;
     background: none;
-    border: 1px solid grey;
+    border: none;
+    box-shadow: 0 0 2px grey;
     border-radius: 5px;
     padding: 10px;
     font-weight: bolder;
@@ -237,7 +241,7 @@ main .container_centered #lignes
 }
 main .container_centered #lignes a
 {
-    padding: 5px;
+    margin: 5px;
 }
 main .container_centered #lignes a img
 {
@@ -251,6 +255,10 @@ main .container_centered #sens
     display: flex;
     flex-direction: column;
     text-align: center;
+}
+main .container_centered #sens a
+{
+    margin-bottom: 15px;
 }
 
 /* Div des horaires */
@@ -266,14 +274,23 @@ main .container_centered #barre #ajout_favoris, main .container_centered #barre 
 main .container_centered #horaires .horaires_ligne_tableau
 {
     display: flex;
-    padding: 5px 0;
-    border-top: 1px solid grey;
+    padding: 5px;
+}
+main .container_centered #horaires .horaires_ligne_tableau:nth-child(odd)
+{
+    background: #f2f2f2;
 }
 main .container_centered #horaires .heures
 {
     margin-right: 10px;
     font-weight: bolder;
     color: #31aa4e;
+}
+
+/* Div des favoris */
+main .container_centered span
+{
+    margin-bottom: 15px;
 }
 
 /* Div des paramètres */
@@ -288,14 +305,14 @@ main .settings .settings_categories
     justify-content: space-between;
     margin: 5px 0;
 }
-main .settings .checkbox_sombre
+main .settings .checkbox
 {
     border: 1px solid grey;
     padding: 8px;
     border-radius: 5px;
     cursor: pointer;
 }
-main .settings .checkbox_sombre.active
+main .settings .checkbox.active
 {
     background: #31aa4e;
 }
@@ -303,21 +320,87 @@ main .settings .checkbox_sombre.active
 /* Notification du pied de page */
 footer .message
 {
-    opacity: 0;
     position: fixed;
-    bottom: 10px;
+    width: 100%;
     background: #FFF;
-    margin: 0 10px;
     padding: 0 15px;
-    box-shadow: 0 2px 4px grey;
+    bottom: 0;
+    box-shadow: 0 0 2px grey;
     visibility: hidden;
-    transition: all 0.5s;
+    transform: translateY(51px);
+    transition: all;
+    transition-duration: .2s;
 }
 footer .message.active
 {
-    opacity: 1;
     visibility: visible;
-    transition: all 0.5s;
+    transform: translateY(0);
+}
+
+/* Libertan */
+main .libertan_cercle_defaut
+{
+    margin: auto;
+    width: 200px;
+    border-radius: 50% / 100% 100% 0 0;
+    border: 15px solid grey;
+    border-bottom: none;
+    animation: tourne 5s linear infinite;
+    transform-origin: center bottom;
+}
+main .libertan_cercle_defaut .libertan_cercle_defaut
+{
+    width: 150px;
+    height: 75px;
+    margin-top: 10px;
+    animation-duration: 2.5s;
+}
+@keyframes tourne
+{
+    to
+    {
+        transform: rotate(360deg);
+    }
+}
+main .libertan_cercle
+{
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    font-size: 150px;
+    line-height: 200px;
+    text-align: center;
+}
+main .libertan_cercle.erreur
+{
+    border: 15px solid #d00000;
+    color: #d00000;
+}
+main .libertan_cercle.compatible
+{
+    border: 15px solid #007305;
+    color: #007305;
+    animation: transmission 2s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+}
+@keyframes transmission
+{
+    0%, 100%
+    {
+        opacity: 0.25;
+    }
+    50%
+    {
+        opacity: 1;
+    }
+}
+main .libertan_texte
+{
+    text-align: center;
+}
+main .libertan_texte.defaut
+{
+    margin-top: 130px;
 }
 
 /* Media Queries */

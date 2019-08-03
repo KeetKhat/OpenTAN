@@ -3,11 +3,11 @@ body, header, header nav
 {
     background: #444 !important;
 }
-header, main .settings, .container_centered, footer .message, main .container_centered form select
+header, main .settings, .container_centered, footer .message, main .container_centered form select, main .container_centered #bouton_envoyer, main .container_centered #arrets
 {
-    box-shadow: 0 2px 4px black !important;
+    box-shadow: 0 0 2px black !important;
 }
-header nav a:hover, main .container_centered #arrets, footer .message, header nav span.titre_categorie
+header nav a:hover, main .container_centered #arrets, footer .message, header nav span.titre_categorie, main .container_centered #horaires .horaires_ligne_tableau:nth-child(odd)
 {
     background: #333 !important;
 }

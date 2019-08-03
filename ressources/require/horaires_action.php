@@ -61,11 +61,11 @@ $url = "https://api.{$_SERVER['HTTP_HOST']}/horaires.php";
 		}
 
 		$cle_arrets = array_search($_GET['arrets'], $liste_arrets['codeArrets']);
-		echo "<h2>{$liste_arrets['nomArrets'][$cle_arrets]} - Ligne {$_GET['ligne']}</h2>";
+		echo "<h2>{$liste_arrets['nomArrets'][$cle_arrets]} - Ligne {$_GET['ligne']} vers :</h2>";
 
 		echo "<div id=\"sens\">";
-		echo "<a href=\"/horaires.php?arrets={$_GET['arrets']}&ligne={$_GET['ligne']}&sens=1\">{$liste_sens->ligne->directionSens1}</a>";
-		echo "<a href=\"/horaires.php?arrets={$_GET['arrets']}&ligne={$_GET['ligne']}&sens=2\">{$liste_sens->ligne->directionSens2}</a>";
+		echo "<a id=\"bouton_envoyer\" href=\"/horaires.php?arrets={$_GET['arrets']}&ligne={$_GET['ligne']}&sens=1\">{$liste_sens->ligne->directionSens1}</a>";
+		echo "<a id=\"bouton_envoyer\" href=\"/horaires.php?arrets={$_GET['arrets']}&ligne={$_GET['ligne']}&sens=2\">{$liste_sens->ligne->directionSens2}</a>";
 		echo "</div>";
 	}
 

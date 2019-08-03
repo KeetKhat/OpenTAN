@@ -1,0 +1,17 @@
+<!-- INCLUDE head.html -->
+<!-- INCLUDE header.html -->
+        <main>
+            <h1>Horaires</h1>
+            <div class="container_centered">
+                <form action="horaires.php" method="get">
+                <h2>Vtre arrêt actuel</h2>
+                <input list="liste_arrets" id="arrets" name="arrets" type="text" />
+                    <datalist id="liste_arrets"></datalist>
+                <input type="submit" id="bouton_envoyer" value="Suivant" />
+            </form>
+            </div>
+            
+            <script src="/ressources/js/autocompletion.js"></script>
+            <script src="/ressources/js/loader.js"></script>
+        </main>
+<!-- INCLUDE footer.html -->

@@ -8,12 +8,16 @@
                 <div class="settings">
                         <div class="settings_categories">
                                 <span>Thème sombre</span>
-                                <div class="checkbox_sombre"></div>
+                                <div class="checkbox sombre"></div>
                         </div>
                         <div class="settings_categories">
-                                <span>Version 1.3.2</span>
+                                <span>Notifications</span>
+                                <div class="checkbox notifications"></div>
+                        </div>
+                        <div class="settings_categories">
+                                <span>Version 1.4_DEV</span>
                         </div>
                 </div>
+                <script src="ressources/js/settings.js"></script>
         </main>
-        <script src="ressources/js/settings.js"></script>
         <?php require_once("ressources/require/footer.php"); ?>

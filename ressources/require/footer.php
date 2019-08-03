@@ -1,6 +1,6 @@
         <footer>
             <script src="/ressources/js/hamburger.js"></script>
-            <noscript><div class="message active"><p>Veuillez activer JavaScript afin d'utiliser OpenTAN</p></div></noscript>
+            <noscript><div class="message active"><p>Veuillez activer JavaScript</p></div></noscript>
             <div class="message"></div>
             <script>
                 let NouveauSW;
@@ -17,7 +17,7 @@
                         register.addEventListener('updatefound', function() 
                         {
                             NouveauSW = register.installing;
-                            document.getElementsByClassName("message")[0].innerHTML = '<p>Téléchargement de la mise à jour</p>'
+                            document.getElementsByClassName("message")[0].innerHTML = '<p>Téléchargement des fichiers</p>'
                             document.getElementsByClassName("message")[0].className += ' active'
                             register.installing.addEventListener('statechange', function(e)
                             {
@@ -25,11 +25,11 @@
                                 {
                                         if (navigator.serviceWorker.controller)
                                         {
-                                            document.getElementsByClassName("message")[0].innerHTML = '<p>Une nouvelle version est disponible, appuyez sur ce message pour l\'installer</p>'
+                                            document.getElementsByClassName("message")[0].innerHTML = '<p>Appuyez pour installer la mise à jour</p>'
                                         }
                                         else
                                         {
-                                            document.getElementsByClassName("message")[0].innerHTML = '<p>L\'application est prête à être utilisée hors-connexion</p>'
+                                            document.getElementsByClassName("message")[0].innerHTML = '<p>Prêt à être utilisée hors-connexion</p>'
                                             document.getElementsByClassName("message")[0].className += ' active'
                                             setTimeout(function()
                                             {

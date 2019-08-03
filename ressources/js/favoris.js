@@ -18,7 +18,7 @@ request.onerror = function() //Si l'ouverture a échoué, on envoie un message �
         setTimeout(function()
         {
             document.getElementsByClassName("message")[0].classList.remove('active')
-        }, 3000)
+        }, 2000)
     }
 }
 
@@ -61,12 +61,12 @@ if (location.pathname.substring(1) === "horaires.php") //Traitement à effectuer
                     {
                         if (bouton_favoris.innerHTML === "Retirer des favoris") //Affichage des données comme quoi la valeur a bien été retiré
                         {
-                            document.getElementsByClassName("message")[0].innerHTML = '<p>Cet horaire a bien été retiré des favoris</p>'
+                            document.getElementsByClassName("message")[0].innerHTML = '<p>Retiré des favoris</p>'
                             document.getElementsByClassName("message")[0].className += ' active'
                             setTimeout(function()
                             {
                                 document.getElementsByClassName("message")[0].classList.remove('active')
-                            }, 3000)
+                            }, 2000)
                             bouton_favoris.innerHTML = "Ajouter aux favoris" //Remplacement par un bouton d'ajout
                         }
                     }
@@ -84,12 +84,12 @@ if (location.pathname.substring(1) === "horaires.php") //Traitement à effectuer
                     {
                         if (bouton_favoris.innerHTML === "Ajouter aux favoris") //Affichage des données comme quoi la valeur a bien été ajouté
                         {   
-                            document.getElementsByClassName("message")[0].innerHTML = '<p>Cet horaire a bien été ajouté aux favoris</p>'
+                            document.getElementsByClassName("message")[0].innerHTML = '<p>Ajouté aux favoris</p>'
                             document.getElementsByClassName("message")[0].className += ' active'
                             setTimeout(function()
                             {
                                 document.getElementsByClassName("message")[0].classList.remove('active')
-                            }, 3000)
+                            }, 2000)
                             bouton_favoris.innerHTML = "Retirer des favoris" //Remplacement par un bouton de retrait
                         }
                     }
@@ -116,13 +116,13 @@ if (location.pathname.substring(1) === "favoris.php") //Traitement à effectuer 
                 document.getElementsByClassName("container_centered")[0].innerHTML = "<h2>Arrêts ajoutés aux favoris</h2>"
                 for (i = 0; e.target.result.length > i; i++)
                 {
-                    document.getElementsByClassName("container_centered")[0].innerHTML += "<p><a href=#" + i + ">" + e.target.result[i].nom + "</a></p>"
+                    document.getElementsByClassName("container_centered")[0].innerHTML += "<span><a href=#" + i + ">⭐ " + e.target.result[i].nom + "</a></span>"
                 }
 
                     if (window.location.hash.substr(1) != "") //Vérification si l'URL contient un hash (Quand l'utilisateur a cliqué sur un lien)
                     {
                         document.getElementsByClassName("container_centered")[0].innerHTML = "<h2>" + e.target.result[window.location.hash.substr(1)].nom + "</h2>"
-                        document.getElementsByClassName("container_centered")[0].innerHTML += "<div id='barre'><p><b id='retour_arriere'>Revenir en arrière</b></p><p><b id='ajout_favoris'>Retirer</b></p></div>" 
+                        document.getElementsByClassName("container_centered")[0].innerHTML += "<div id='barre'><p><b id='retour_arriere'>Retour</b></p><p><b id='ajout_favoris'>Retirer</b></p></div>" 
                         document.getElementsByClassName("container_centered")[0].innerHTML += "<div id='horaires'>" + e.target.result[window.location.hash.substr(1)].contenu + "</div>"
     
                         document.getElementById("retour_arriere").addEventListener("click", function() //Évenement pour gérer le clique sur le bouton "Revenir en arrière"
@@ -149,7 +149,7 @@ if (location.pathname.substring(1) === "favoris.php") //Traitement à effectuer 
                         setTimeout(function() //Ajout d'un sleep car certains navigateurs n'affichent pas les horaires si le rafraîchissement est déclenché trop rapidement
                         {
                             window.location.reload()
-                        }, 5)
+                        }, 50)
                     }
                 }
             }

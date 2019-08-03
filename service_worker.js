@@ -1,5 +1,5 @@
 const nom_cache = 'OpenTAN'
-const ver_cache = '1.3.2'
+const ver_cache = '1.4_DEV'
 
 self.addEventListener('install', event => {
     event.waitUntil(
@@ -18,7 +18,6 @@ self.addEventListener('install', event => {
             '/ressources/css/sombre.css',
             '/ressources/fonts/Frutiger-Cn.otf',
             '/ressources/js/autocompletion.js',
-            '/ressources/js/autocompletion_ios.js',
             '/ressources/js/hamburger.js',
             '/ressources/js/favoris.js',
             '/ressources/js/manifest.json',
